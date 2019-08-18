@@ -5,8 +5,7 @@ import GradeTable from './gradetable';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { grades: [],
-      avg: 0 };
+    this.state = { grades: [] };
   }
 
   componentDidMount() {
