@@ -4,9 +4,46 @@ h4 {
 }
 
 #root {
-    padding: 50px;
+    padding: 20px;
 }
 
 h1 {
+    display: inline;
+
+}
+
+.table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 60%;
+    border: 1px solid #ddd;
+    float:left;
+}
+
+.thead-dark{
+    width:60%;
+
+}
+
+.form {
+    width: 30%;
     display: inline-block;
+    float: right;
+
+}
+
+.cnclbtn{
+    width: 30%;
+    display: inline-block;
+    float: right;
+
+}
+
+.btn-primary{
+    width:80px;
+    margin:20px;
+}
+
+.badge-secondary{
+    margin:10px;
 }
