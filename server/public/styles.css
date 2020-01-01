@@ -13,28 +13,29 @@ h1 {
 }
 
 .table {
-    border-collapse: collapse;
-    border-spacing: 0;
+    /* border-collapse: collapse; */
+    /* border-spacing: 0; */
     width: 60%;
-    border: 1px solid #ddd;
+    border: 1px solid black;
     float:left;
+    margin-top: 10px;
 }
 
 .thead-dark{
     width:60%;
-
 }
 
 .form {
     width: 30%;
-    display: inline-block;
-    float: right;
+    /* display: inline-block; */
+    float:right;
+    margin:10px;
 
 }
 
 .cnclbtn{
     width: 30%;
-    display: inline-block;
+    /* display: inline-block; */
     float: right;
 
 }

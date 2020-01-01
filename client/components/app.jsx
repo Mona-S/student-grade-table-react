@@ -8,6 +8,7 @@ class App extends React.Component {
     super(props);
     this.state = { grades: [] };
     this.addGrade = this.addGrade.bind(this);
+    this.deleteGrade = this.deleteGrade.bind(this);
   }
 
   componentDidMount() {
@@ -15,6 +16,7 @@ class App extends React.Component {
       .then(response => response.json())
       .then(data => {
         this.setState({ grades: data });
+
       });
   }
 
@@ -45,11 +47,25 @@ class App extends React.Component {
       });
   }
 
+  deleteGrade(removeId) {
+    const req = {
+      method: 'DELETE',
+      headers: { 'Content-Type': 'application/json' }
+    };
+
+    fetch('/api/grades/' + removeId, req)
+      .then(response => response.json())
+      .then(data => {
+        const allData = this.state.grades;
+        this.setState({ grades: allData });
+      });
+  }
+
   render() {
     return (
       <React.Fragment>
         <Header calculatedAverage={this.getAverageGrade()}></Header>
-        <GradeTable grades={this.state.grades}></GradeTable>
+        <GradeTable grades={this.state.grades} deleteFunc={this.deleteGrade}></GradeTable>
         <GradeForm onClick={this.addGrade}></GradeForm>
       </React.Fragment>
     );

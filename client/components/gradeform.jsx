@@ -27,7 +27,6 @@ class GradeForm extends React.Component {
       course: this.state.course,
       grade: this.state.grade
     };
-
     this.props.onClick(newGrade);
     this.handleReset();
   }

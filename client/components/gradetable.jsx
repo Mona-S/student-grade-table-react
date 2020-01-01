@@ -12,10 +12,11 @@ function GradeTable(props) {
             <th scope="col">Student Name</th>
             <th scope="col">Course</th>
             <th scope="col">Grade</th>
+            <th scope="col">Operations</th>
           </tr>
         </thead>
         {props.grades.map(data => {
-          return <Grade key={data.id} grade={data}/>;
+          return <Grade key={data.id} grade={data} deleteGrade={props.deleteFunc}/>;
         }
         )
         }
